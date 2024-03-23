@@ -2,19 +2,21 @@
 body {
     margin: 0;
     font-family: Nunito Sans, Arial, sans-serif;
-    font-size: 0.85rem;
-    line-height: 2;
+    font-size: 0.7rem;
+    line-height: normal;
     color: rgb(36, 36, 36);
     box-sizing: border-box;
 }
 .container {
-    max-width: 1250px;
-    margin: 0 auto;    
+    display: flex;
+    flex-direction: column;
+    margin: 0 2vw;    
 }
 
 header .container, footer .container {
     display: flex;
-    height: 83px;
+    flex-direction: row;
+    height: 12vw;
     justify-content: space-around;
     align-items: center;
     font-size: 0.7rem;
@@ -26,32 +28,47 @@ header, footer {
 }
 
 header button, footer button {
+    display: none;
     font-size: 0.7rem;
     padding: 13px 33px;
 }
 
 button {
     min-width: 200px;
+    max-width: 330px;
     background-color: #E3B873;
     box-shadow: 5px 5px 5px rgba(227, 184, 115, 0.1);
     border: 0;
     border-radius: 2px;
     outline: 0;
-    padding: 20px 33px;
+    padding: 18px 33px;
     margin: 10px;
     color: #ffffff;
     font-style: italic;
     text-transform: uppercase;
     font-family: 'Nunito Sans', Arial, sans-serif;
-    font-size: 0.8rem;
+    font-size: 0.7rem;
 }
 
 button:hover {
     background-color: #e1b46b;
 }
-
 .small_nav {
-    display: none;
+    width: 10vw;
+    height: 10vw;
+    background-color: #E3B873;
+    border: #c6a165 1px solid;
+    border-radius: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    margin: 3vw;
+}
+
+.small_nav img {
+    width: 3vw;
+    height: 3vw;
 }
 
 h1 {
@@ -66,7 +83,7 @@ h2 {
     font-family: 'Yeseva One', 'Times New Roman', Times, serif;
     text-transform: uppercase;
     line-height: normal;
-    font-size: 1.7rem;
+    font-size: 1.4rem;
     margin: 0;
 }
 
@@ -74,14 +91,19 @@ p {
     margin: 0;
 }
 
-.logo ,.number {
+.logo {
     color: #E3B873;
     text-transform: uppercase;
 }
 
+.number {
+    color: #ffffff;
+}
+
 nav ul {
+    
     list-style: none;
-    display: flex;
+    display: none;
     padding: 0;
     margin: 0;
 }
@@ -98,29 +120,34 @@ nav a:hover {
                 /* ----- 1 -----*/
 
 .section_first {
-    font-size: 165%;
+    font-size: 4vw;
     color: #ffffff;
     position: relative;
-    height: 707px;
     background: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)),url(../images/image_1.jpg);
+    height: inherit;
     background-size: cover;
+    background-position: center;
 }
 
 .section_first .container {
-    padding-top: 194px;
-    padding-left: 134px;
+    align-items: flex-start;
+    padding: 20vw 0;
 }
 
 .section_first .container .content {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
     max-width: 677px;
+
 }
 
 .section_first h2 {
-font-size: 180%;
+font-size: 6.5vw;
 }
 
 .section_first p {
-    margin: 20px 0;
+    margin: 5.5vw 0;
 }
 
 .section_first span {
@@ -136,31 +163,33 @@ font-size: 180%;
                 /* ----- 2 -----*/
 
 .section_two {
-    height: 1074px;
-    padding-top: 107px;
+    height: auto;
+    padding-top: 20vw;
+    padding-bottom: 340px;
     background-color: #131313;
     color: #ffffff;
 }
                 /* Grid */
     .section_two .container {
         display: grid;
-        grid-template-columns: 20% 20% 60%;
-        grid-template-rows: 70px 100px 130px 100px 100px 52px;
+        grid-template-columns: 50% 50%;
+        grid-template-rows: 100px 100px 70vw 70px 70px;
     }
 
     .section_two .item-1-3 {
-        grid-row-start: 1;
-        grid-column-start: 3;
+        display: none;
     }
 
     .section_two .item-2-12 {
-        grid-row-start: 2;
+        grid-row-start: 1;
         grid-column: 1/3;
+        text-align: center;
     }
 
     .section_two .item-3-12 {
-        grid-row-start: 3;
+        grid-row-start: 2;
         grid-column: 1/3;
+        text-align: center;
     }
 
     .section_two .item-4-1 {
@@ -184,19 +213,18 @@ font-size: 180%;
     }
 
     .section_two .item-23456-3 {
-        grid-row: 2/6;
-       grid-column-start: 3;
-       display: flex;
-       justify-content: center;
+        grid-row: 3;
+        grid-column: 1/3;
+        display: flex;
+        justify-content: center;
     }
 
     .section_two .item-6-1 {
-        grid-row-start: 6;
-        grid-column: 1;
+        display: none;
     }
 
 .section_two nav ul {
-    display: flex;
+    display: inline-flex;
     justify-content: space-around;
 }
 
@@ -215,17 +243,21 @@ font-size: 180%;
 }
 
 .section_two article h1 {
-    font-size: 1.12rem;
+    font-size: 1rem;
+    margin:10px 0;
 }
 
 .section_two .img_rostov_admiral {
     background-image: url(../images/image_2.2.jpg);
     background-size: cover;
     background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
 .section_two .navigation {
-    display: inline-flex;
+    display: none;
     align-items: center;
 }
 
@@ -254,6 +286,8 @@ font-size: 180%;
 
 .section_three {
     margin-top: -323px;
+    background-color: #131313;
+    color: #ffffff;
 }
 
 .section_three .container {
@@ -268,8 +302,8 @@ font-size: 180%;
 }
 
 .section_three .online-control {
-    width: 817px;
-    height: 434px;
+    width: 90vw;
+    height: 60vw;
     background: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)),url(../images/image_2.jpg);
     background-size: cover;
     display: flex;
@@ -283,28 +317,34 @@ font-size: 180%;
 }
 
 .section_three .text-content {
-width: 680px;
+width: 90vw;
 text-align: center;
 margin: 5px 0;
 }
 
 .section_three .request_for_broadcast {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    justify-content:stretch;
     align-items: center;
-    max-width: 770px;
+    min-width: 300px;
+    max-width: 408px;
     margin-top: 30px;
 }
 
 .request_for_broadcast article {
-    margin: 0 25px;
+    margin: 10px 5px;
 }
 
 .request_for_broadcast article label {
-    color: rgba(36, 36, 36, 0.5);
+    color: rgba(255, 255, 255, 0.5);
 }
 
 .request_for_broadcast article input {
+    max-width: 408px;
+    min-width: 300px;
+    color: #ffffff;
+    background-color: #131313;
     border-width: 0 0 1px 0;
 }
 
@@ -320,9 +360,18 @@ article input::placeholder {
     margin: 30px 0;
 }
 
+.request_for_broadcast button {
+    margin-top: 50px;
+}
+
+.section_three .checkbox {
+    margin-top: -100px;
+    margin-bottom: 50px;
+}
 #checkbox_bordercast:checked {
     background-color:#E3B873;
 }
+
 
                 /* ----- 4 -----*/
 
@@ -330,7 +379,8 @@ article input::placeholder {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-bottom: 415px;
+    margin-top: 50px;
+    margin-bottom: 250px;
 }
 
 .section_four h1 {
@@ -341,15 +391,17 @@ article input::placeholder {
     width: 100%;
     margin-top: 30px;
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
 }
 
 .section_four .types-of-repair {
-    width: 332px;
-    height: 421px;
-    padding: 0 30px;
-    margin: 0 5px;
+    width: auto;
+    max-width: 368px;
+    min-width: 268px;
+    height: 360px;
+    padding: 0;
+    margin-bottom: 230px;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
@@ -359,26 +411,30 @@ article input::placeholder {
 .section_four .redecorating {
     background-image: url("../images/image_3.1.jpg");
     background-size: cover;
+    background-position: center;
 }
 
 .section_four .overhaul {
     background-image: url("../images/image_3.2.jpg");
     background-size: cover;
+    background-position: center;
 }
 
 .section_four .designer_repair {
     background-image: url("../images/image_3.3.jpg");
     background-size: cover;
+    background-position: center;
 }
 
 .section_four .about_repair {
-    height: 285px;
-    width: inherit;
+    height: 225px;
+    width: 268px;
     background-color: #ffffff;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
+    margin-right: 15vw;
     margin-bottom: -28px;
     box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.1);
 }
@@ -391,6 +447,7 @@ article input::placeholder {
 }
 
 .section_four .about_repair li {
+    line-height: 2;
     color: #959595;
 }
 .section_four .about_repair ul {
@@ -398,13 +455,16 @@ article input::placeholder {
 }
 
 .section_four button {
-    margin-bottom: -185px;
-    font: normal bold 1.2rem 'Yeseva One', 'Times New Roman', Times, serif;
+    margin-bottom: -125px;
+    min-width: 195px;
+    padding: 10px 0;
+    font: normal bold 1rem 'Yeseva One', 'Times New Roman', Times, serif;
 }
 
                 /* ----- 5 -----*/
 
 .section_five {
+    display: none;
     background-image: url(../images/image_3.jpg);
     background-position: 25%;
     background-repeat: no-repeat;
