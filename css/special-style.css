@@ -13,6 +13,10 @@ body {
     margin: 0 2vw;    
 }
 
+footer {
+    display: none;
+}
+
 header .container, footer .container {
     display: flex;
     flex-direction: row;
@@ -312,6 +316,10 @@ font-size: 6.5vw;
     margin: 30px 0;
 }
 
+.section_three .online-control  img {
+    width: 20vw;
+}
+
 .section_three .line {
     margin: 30px 0;
 }
@@ -401,7 +409,7 @@ article input::placeholder {
     min-width: 268px;
     height: 360px;
     padding: 0;
-    margin-bottom: 230px;
+    margin-bottom: 150px;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
@@ -560,32 +568,35 @@ article input::placeholder {
     font-size: 1.2rem;
 }
 
-/* ----- 6 -----*/
+                /* ----- 6 -----*/
 
 .section_six {
-    background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),url(../images/image_5.1full.jpg);
+    background: #131313;
     background-size: cover;
     background-position: center;
 }
 
 .section_six .container {
     display: flex;
-    align-items: flex-start;
+    flex-direction: column;
+    align-items: center;
 }
 
 .section_six .text-content {
-    width: 411px;
-    margin-right: 77px;
-    margin-top: 147px;
+    width: auto;
+    margin-right:0;
+    margin-top: -210px;
     line-height: normal;
 }
 
 .section_six .text-content h2 {
     color: #E3B873;
+    text-align: center;
     margin-bottom: 47px;
 }
 
 .section_six .text-content ul {
+    display: none;
     list-style: none;
     padding: 0;
     margin: 0;
@@ -606,11 +617,24 @@ article input::placeholder {
 }
 
 .section_six .image-colum1 {
+    display: none;
     margin-right: 40px;
 }
 
 .section_six .image-colum2 {
+    display: none;
     margin-right: 40px;
+}
+
+.section_six .image-for-mobile {
+    width: 90vw;
+    height: 60vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-image: url(../images/image_5.1full.jpg);
+    background-size: cover;
+    background-position: center;
 }
 
 .section_six .image-colum1 div:nth-child(1) {
@@ -646,9 +670,10 @@ article input::placeholder {
     background-size: cover;
 }
 
-/* ----- 7 -----*/
+                /* ----- 7 -----*/
 
 .section_seven {
+    display: none;
     background: linear-gradient(rgba(255, 255, 255, 0.95), rgba(255, 255, 255, 0.95)),url(../images/image_6.svg);
     background-position: bottom;
     background-repeat: repeat-x;
@@ -748,26 +773,28 @@ article input::placeholder {
 /* ----- 8 -----*/
 
 .section_eight {
-    height: 0px;
+    height: auto;
     display: flex;
+    justify-content: center;
+    background-color: #131313;
 }
 
 .section_eight .container form {
-    width: 780px;
+    width: 90vw;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items:center;
     position: relative;
-    z-index: 1;
+    z-index: 0;
     background-color: #131313;
     color: #ffffff;
-    padding: 25px 50px;
-    box-shadow: 0 0 3px rgba(255, 255, 255, 0.1);
-    margin-top: -222px;
+    padding: 25px 5px;
+    box-shadow: 0 0 0 rgba(255, 255, 255, 0);
+    margin-top: 30px;
 }
 
 .section_eight form h1 {
-    width: 300px;
+    width: auto;
     font-size: 1.2rem;
     text-align: center;
     margin-bottom: -20px;
@@ -775,17 +802,19 @@ article input::placeholder {
 
 .section_eight form .row1,
 .section_eight form .row2 {
-    width: 520px;
+    width: auto;
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
 }
 
 .section_eight .row1 input {
-    width: 230px;
+    width: 90vw;
 }
 
 .section_eight .row2 input {
-    width: 516px;
+    width: 90vw;
 }
 
 .section_eight form article {
@@ -807,18 +836,19 @@ article input::placeholder {
 
 .section_eight form .checkbox {
     padding: 40px 0;
+    margin: 0 auto;
 }
 
 /* ----- 9 -----*/
 
 .section_nine {
-    background: linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.85)),url(../images/image_7.jpg);
+    background: #131313;
     background-size: cover;
     background-position: center;
 }
 
 .section_nine .container {
-    padding-top: 270px;
+    padding-top: 10px;
     color: #E3B873;
     display: flex;
     flex-direction: column;
@@ -827,13 +857,29 @@ article input::placeholder {
 
 .section_nine h1 {
     text-align: center;
+    padding: 20px 5px;
+}
+
+.section_nine h1 .desktop {
+    display: none;
+}
+.section_nine h1 .mobile {
+    display: inline;
 }
 
 .section_nine .social_media {
     display: inline;
-    padding-top: 30px;
+    padding-top: 0;
+    padding-bottom: 30px;
 }
 
 .section_nine .pic_map {
-    padding: 40px 0 65px 0;
+    display: none;
+}
+.section_nine .pic_map_mobile {
+    display: block;
+}
+
+.section_nine .pic_map_mobile img {
+    width: 90vw;
 }

@@ -769,6 +769,13 @@ article input::placeholder {
     text-align: center;
 }
 
+.section_nine h1 .desktop {
+    display: inline;
+}
+.section_nine h1 .mobile {
+    display: none;
+}
+
 .section_nine .social_media {
     display: inline;
     padding-top: 30px;
@@ -776,4 +783,8 @@ article input::placeholder {
 
 .section_nine .pic_map {
     padding: 40px 0 65px 0;
+}
+
+.section_nine .pic_map_mobile {
+    display: none;
 }
